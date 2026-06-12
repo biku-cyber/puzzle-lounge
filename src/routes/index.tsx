@@ -1,29 +1,26 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { PuzzleApp } from "@/components/puzzle/PuzzleApp";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "Puzzle — A luxury offline puzzle lounge" },
+      { name: "description", content: "Nine handcrafted puzzles in one calm, offline-ready lounge. Shared XP, achievements, daily challenges and themes." },
+      { name: "theme-color", content: "#1a1410" },
+      { property: "og:title", content: "Puzzle — Lounge" },
+      { property: "og:description", content: "A premium offline puzzle lounge with shared XP, daily challenges and themes." },
+    ],
+    links: [
+      { rel: "manifest", href: "/manifest.webmanifest" },
+      { rel: "apple-touch-icon", href: "/icons/icon-192.png" },
+      { rel: "icon", href: "/icons/icon-192.png" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" },
     ],
   }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
+  return <PuzzleApp />;
 }
