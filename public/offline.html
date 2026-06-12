@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Puzzle — Offline</title>
+  <style>
+    html, body { height: 100%; margin: 0; font-family: ui-sans-serif, system-ui, sans-serif; }
+    body { background: radial-gradient(ellipse at top, #3a2a1c, #120c08); color: #f6e3bb; display: flex; align-items: center; justify-content: center; padding: 2rem; }
+    .card { max-width: 360px; text-align: center; padding: 2rem; border-radius: 24px; background: rgba(255,255,255,0.04); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.08); }
+    h1 { font-family: "Cormorant Garamond", Georgia, serif; font-size: 2rem; margin: 0 0 0.5rem; background: linear-gradient(135deg,#f6d28b,#c08a3a); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    p { opacity: 0.75; font-size: 0.95rem; line-height: 1.5; }
+    button { margin-top: 1rem; background: linear-gradient(135deg,#f6d28b,#c08a3a); color: #1a1410; border: 0; border-radius: 999px; padding: 0.75rem 1.5rem; font-weight: 600; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Quiet for a moment</h1>
+    <p>You're offline — but Puzzle works without a connection. Reopen the app to continue your lounge.</p>
+    <button onclick="location.reload()">Retry</button>
+  </div>
+</body>
+</html>
