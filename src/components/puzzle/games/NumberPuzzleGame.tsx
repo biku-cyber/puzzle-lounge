@@ -27,11 +27,11 @@ const MODES: { id: Mode; label: string; desc: string }[] = [
 ];
 
 const IMAGES: { id: number; src: string; label: string }[] = [
-  { id: 1, src: "/images/puzzle/img-1.svg", label: "Amber"   },
-  { id: 2, src: "/images/puzzle/img-2.svg", label: "Azure"   },
-  { id: 3, src: "/images/puzzle/img-3.svg", label: "Verdant" },
-  { id: 4, src: "/images/puzzle/img-4.svg", label: "Plum"    },
-  { id: 5, src: "/images/puzzle/img-5.svg", label: "Honey"   },
+  { id: 1, src: "/images/puzzle/img-1.jpg", label: "Photo 01" },
+  { id: 2, src: "/images/puzzle/img-2.jpg", label: "Photo 02" },
+  { id: 3, src: "/images/puzzle/img-3.jpg", label: "Photo 03" },
+  { id: 4, src: "/images/puzzle/img-4.jpg", label: "Photo 04" },
+  { id: 5, src: "/images/puzzle/img-5.jpg", label: "Photo 05" },
 ];
 
 interface Save {
