@@ -4,7 +4,7 @@ import { PuzzleStore } from "@/lib/puzzle/store";
 import { mulberry32, shuffle } from "@/lib/puzzle/rng";
 import {
   Shuffle, Undo2, Lightbulb, Pause, Play, RotateCcw,
-  ChevronLeft, ChevronRight, Image as ImageIcon, Hash, Lock, Eye,
+  ChevronLeft, ChevronRight, Hash, Lock, Eye,
 } from "lucide-react";
 import { CompletionOverlay } from "./CompletionOverlay";
 
