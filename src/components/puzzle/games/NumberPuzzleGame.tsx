@@ -257,14 +257,8 @@ function SetupPanel({
   const modeIdx = MODES.findIndex((m) => m.id === config.mode);
   const imgIdx  = IMAGES.findIndex((i) => i.id === config.imageId);
 
-  function cycle<T>(arr: T[], idx: number, dir: 1 | -1, pred: (x: T) => boolean = () => true): T {
-    let next = idx;
-    for (let k = 0; k < arr.length; k++) {
-      next = (next + dir + arr.length) % arr.length;
-      if (pred(arr[next])) return arr[next];
-    }
-    return arr[idx];
-  }
+
+
 
   return (
     <div className="space-y-5 animate-float-up">
