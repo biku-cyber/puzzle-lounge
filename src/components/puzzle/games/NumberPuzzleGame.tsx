@@ -478,20 +478,13 @@ function Board({ config, initialTiles, initialMoves = 0, initialElapsed = 0, onE
     if (Math.max(adx, ady) < 24) return;
     const blank = tiles.indexOf(0);
     const br = Math.floor(blank / N), bc = blank % N;
+    // Swipe direction = direction tiles should travel toward blank.
+    // Source tile = neighbor of blank opposite to swipe direction.
     let targetIdx = -1;
-    if (adx > ady) targetIdx = dx > 0 ? br * N + 0 : br * N + (N - 1); // swipe right pushes left tiles right toward blank → tap leftmost in row
-    else targetIdx = dy > 0 ? 0 * N + bc : (N - 1) * N + bc;
-    // Actually: swipe direction = direction tiles should move. The "source" tile is the farthest one in that row/col from blank in the swipe direction.
     if (adx > ady) {
-      // horizontal swipe
       targetIdx = dx > 0
-        ? br * N + Math.max(0, bc - (N - 1)) // leftmost cell in row (will push everything right)
-        : br * N + Math.min(N - 1, bc + (N - 1)); // rightmost
-      // Simpler: target = cell that, when slid toward blank, moves in swipe direction.
-      // If swipe right (dx>0), tiles move right → blank moves left → source is any cell to the LEFT of blank in same row.
-      targetIdx = dx > 0
-        ? br * N + (bc > 0 ? bc - 1 : -1)
-        : br * N + (bc < N - 1 ? bc + 1 : -1);
+        ? (bc > 0 ? br * N + (bc - 1) : -1)
+        : (bc < N - 1 ? br * N + (bc + 1) : -1);
     } else {
       targetIdx = dy > 0
         ? (br > 0 ? (br - 1) * N + bc : -1)
